@@ -1,6 +1,22 @@
-if (window.location.pathname == '/index.html' || window.location.pathname == '/') {
-  document.getElementById('btn-test').addEventListener('click', showAnother);
-}
-function showAnother() {
-  onNavItemClick('/otro.html');
-}
+addEventsExample()
+
+// function addEventsExample() {
+//   const loginButton = document.querySelector('.logInWindow')
+//   const registerButton = document.querySelector('.registerWindow')
+//
+//   if (loginButton) {
+//     loginButton.addEventListener('click', logInOption);
+//   }
+//
+//   if (registerButton) {
+//     registerButton.addEventListener('click', registerOption);
+//   }
+//
+//   function logInOption() {
+//     onNavItemClick('/ingresar');
+//   }
+//
+//   function registerOption() {
+//     onNavItemClick('/registrar');
+//   }
+// }
