@@ -12,3 +12,5 @@ let logInTemplate = `
   </section>
 </div>
 `;
+
+export default logInTemplate;

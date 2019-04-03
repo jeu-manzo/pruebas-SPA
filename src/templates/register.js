@@ -12,3 +12,5 @@ let registerTemplate = `
   </section>
 </div>
 `;
+
+export default registerTemplate;
