@@ -8,7 +8,7 @@ let registerTemplate = `
   <section class='flex-user' id='container'>
     <input id='email' type="text">
     <input id='password' type="password">
-    <button id='register'>Register</button>
+    <button class='btn-register'>Register</button>
   </section>
 </div>
 `;

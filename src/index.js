@@ -2,42 +2,46 @@ import logInTemplate from './templates/logIn';
 import registerTemplate from './templates/register';
 import wallTemplate from './templates/wall';
 import events from './events';
+// import buttons from './firebase.js'
 
 const contentDiv = document.querySelector('.content');
 
 let routes = {
   '/': {
     template: logInTemplate,
-    events: events.addEventsExample
+    events: events.homeEvents
   },
   '/index.html': {
     template: logInTemplate,
-    events: events.addEventsExample
+    events: events.homeEvents
   },
   '/ingresar':  {
     template: logInTemplate,
-    events: events.addEventsExample
+    events: events.homeEvents
   },
   '/registrar':  {
     template: registerTemplate,
-    events: events.addEventsExample
+    events: events.homeEvents
   },
-  '/muro': wallTemplate,
+  '/muro': {
+  template: wallTemplate
+  },
 };
 
-// window.onpopstate = function (event) {
-//   location.pathname
-// }
+window.onpopstate = function () {
+ // contentDiv.innerHTML = routes[window.location.pathname].template;
+}
 
-let onNavItemClick = (pathName) => {
+let elementClick = (pathName) => {
   window.history.pushState({}, pathName, window.location.origin + pathName);
   window.history.pushState({}, pathName, window.location.origin + pathName);
-  window.history.back()
+  window.history.back();
   contentDiv.innerHTML = routes[pathName].template;
-  routes[pathName].events()
+  routes[pathName].events();
+
 }
 
 contentDiv.innerHTML = routes[window.location.pathname].template;
 
-events.addEventsExample();
-export { onNavItemClick }
+events.homeEvents();
+export { elementClick }

@@ -8,7 +8,7 @@ let logInTemplate = `
   <section class="flex-user" id='containerlogIn'>
     <input id='emailIn' type="text">
     <input id='passwordIn' type="password">
-    <button id='openAccount'>Iniciar Sesión</button>
+    <button class='btn-logIn'>Iniciar Sesión</button>
   </section>
 </div>
 `;
