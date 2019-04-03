@@ -2,6 +2,7 @@ import logInTemplate from './templates/logIn';
 import registerTemplate from './templates/register';
 import wallTemplate from './templates/wall';
 import events from './events';
+
 // import buttons from './firebase.js'
 
 const contentDiv = document.querySelector('.content');

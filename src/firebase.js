@@ -2,7 +2,7 @@ import logInTemplate from './templates/logIn';
 import registerTemplate from './templates/register';
 import wallTemplate from './templates/wall';
 
-import { elementClick } from './index'
+import { elementClick } from './index';
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
   //Registrar Usuario con correo y contraseña
-document.querySelector('.btn-register').addEventListener('click', console.log("holi"));
+// document.querySelector('.btn-register').addEventListener('click', signUp);
 function signUp () {
 const userEmail = document.getElementById('email').value;
 const userPassword = document.getElementById('password').value;
@@ -37,7 +37,7 @@ firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).catch(fu
 
 // Iniciar sesión
 
-document.querySelector('.btn-logIn').addEventListener('click', logIn);
+// document.querySelector('.btn-logIn').addEventListener('click', logIn);
 function logIn() {
     const userEmail = document.getElementById('emailIn').value;
     const userPassword = document.getElementById('passwordIn').value;
@@ -55,7 +55,7 @@ function logIn() {
 
 
 // Cerrar sesión
-document.getElementById('logout').addEventListener('click',logOut);
+// document.getElementById('logout').addEventListener('click',logOut);
 function logOut() {
     firebase.auth().signOut();
 }
@@ -71,3 +71,10 @@ function logOut() {
 //   console.log("holi registrar");
 //     elementClick('/registrar');
 // }
+
+
+export default {
+  signUp,
+  logIn,
+  logOut
+}
