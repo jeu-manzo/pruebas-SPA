@@ -31,7 +31,8 @@ let routes = {
 };
 
 window.onpopstate = function () {
- // contentDiv.innerHTML = routes[window.location.pathname].template;
+// contentDiv.innerHTML = routes[window.location.pathname].template;
+// routes[pathName].events();
 }
 
 let elementClick = (pathName) => {
