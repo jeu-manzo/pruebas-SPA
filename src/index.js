@@ -25,7 +25,8 @@ let routes = {
     events: events.homeEvents
   },
   '/muro': {
-  template: wallTemplate
+    template: wallTemplate,
+    events: events.wallEvents
   },
 };
 
@@ -45,4 +46,4 @@ let elementClick = (pathName) => {
 contentDiv.innerHTML = routes[window.location.pathname].template;
 
 events.homeEvents();
-export { elementClick }
+export { elementClick, routes }

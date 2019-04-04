@@ -7,6 +7,7 @@ function homeEvents() {
   const btnRegisterx = document.querySelector('.btn-register');
   const btnLogx = document.querySelector('.btn-logIn');
 
+
   if (loginButton) {
     loginButton.addEventListener('click', logInOption);
   }
@@ -29,46 +30,24 @@ function homeEvents() {
 
 
 if (btnRegisterx ) {
-  const email1= document.getElementById('email').value;
-  const password1 = document.getElementById('password').value;
-  btnRegisterx.addEventListener('click', () => signUp(email1, password1));
+  btnRegisterx.addEventListener('click', () => signUp());
 }
 
 
 
 if (btnLogx) {
-  const email2 = document.getElementById('emailIn').value;
-  const password2 = document.getElementById('passwordIn').value;
-  btnLogx.addEventListener('click', () => logIn(email2, password2));
+  btnLogx.addEventListener('click', () => logIn());
+}
 }
 
-// function prueba20() {
-//   console.log("registrado")
-// }
-//
-// function prueba21() {
-//   console.log("inicio sesión");
-// }
-
-  // const logInBtnWall = document.querySelector('.btn-logIn');
-  // const registerBtnWall = document.querySelector('.btn-register');
-  //
-  // if (logInBtnWall) {
-  //   logInBtnWall.addEventListener('click', logInWall);
-  // }
-  //
-  // if (registerBtnWall) {
-  //   registerBtnWall.addEventListener('click', logInWall);
-  // }
-  //
-  // function logInWall() {
-  //   elementClick('/muro');
-  // }
-
+function wallEvents() {
+  const logOutBtn = document.querySelector('#logout');
+  if (logOutBtn) {
+    logOutBtn.addEventListener('click', () => logOut())
+  }
 }
-
-
 
 export default {
-  homeEvents
+  homeEvents,
+  wallEvents
 }
