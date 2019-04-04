@@ -2,18 +2,18 @@ import { elementClick } from './index';
 import { signUp, logIn, logOut } from './firebase';
 
 function homeEvents() {
-  const loginButton = document.querySelector('.logInWindow');
-  const registerButton = document.querySelector('.registerWindow');
-  const btnRegisterx = document.querySelector('.btn-register');
-  const btnLogx = document.querySelector('.btn-logIn');
+  const logInTab = document.querySelector('.logInWindow');
+  const signUpTab = document.querySelector('.registerWindow');
+  const btnSignUp = document.querySelector('.btn-register');
+  const btnLogIn = document.querySelector('.btn-logIn');
 
 
-  if (loginButton) {
-    loginButton.addEventListener('click', logInOption);
+  if (logInTab) {
+    logInTab.addEventListener('click', logInOption);
   }
 
-  if (registerButton) {
-    registerButton.addEventListener('click', registerOption);
+  if (signUpTab) {
+    signUpTab.addEventListener('click', registerOption);
 
   }
 
@@ -29,21 +29,21 @@ function homeEvents() {
   }
 
 
-if (btnRegisterx ) {
-  btnRegisterx.addEventListener('click', () => signUp());
+if (btnSignUp) {
+  btnSignUp.addEventListener('click', signUp);
 }
 
 
 
-if (btnLogx) {
-  btnLogx.addEventListener('click', () => logIn());
+if (btnLogIn) {
+  btnLogIn.addEventListener('click', logIn);
 }
 }
 
 function wallEvents() {
   const logOutBtn = document.querySelector('#logout');
   if (logOutBtn) {
-    logOutBtn.addEventListener('click', () => logOut())
+    logOutBtn.addEventListener('click', logOut);
   }
 }
 
