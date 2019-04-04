@@ -1,7 +1,5 @@
 import { elementClick } from './index';
-import signUp from './firebase';
-import logIn from './firebase';
-import logOut from './firebase';
+import { signUp, logIn, logOut } from './firebase';
 
 function homeEvents() {
   const loginButton = document.querySelector('.logInWindow');
@@ -18,29 +16,39 @@ function homeEvents() {
 
   }
 
-  function logInOption() {
+  function logInOption(event) {
+    event.preventDefault();
+    console.log('loginoption');
     elementClick('/ingresar');
   }
 
-  function registerOption() {
+  function registerOption(event) {
+    event.preventDefault();
     elementClick('/registrar');
   }
 
+
 if (btnRegisterx ) {
-  btnRegisterx.addEventListener('click', prueba20);
+  const email1= document.getElementById('email').value;
+  const password1 = document.getElementById('password').value;
+  btnRegisterx.addEventListener('click', () => signUp(email1, password1));
 }
+
+
 
 if (btnLogx) {
-  btnLogx.addEventListener('click', prueba21);
+  const email2 = document.getElementById('emailIn').value;
+  const password2 = document.getElementById('passwordIn').value;
+  btnLogx.addEventListener('click', () => logIn(email2, password2));
 }
 
-function prueba20() {
-  console.log("alv prro")
-}
-
-function prueba21() {
-  console.log("holis");
-}
+// function prueba20() {
+//   console.log("registrado")
+// }
+//
+// function prueba21() {
+//   console.log("inicio sesión");
+// }
 
   // const logInBtnWall = document.querySelector('.btn-logIn');
   // const registerBtnWall = document.querySelector('.btn-register');
